@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -48,6 +48,8 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            label5 = new Label();
+            textBox3 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -144,7 +146,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(188, 98);
+            label2.Location = new Point(181, 72);
             label2.Name = "label2";
             label2.Size = new Size(76, 21);
             label2.TabIndex = 2;
@@ -153,7 +155,7 @@
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(404, 124);
+            textBox1.Location = new Point(397, 98);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(188, 23);
             textBox1.TabIndex = 3;
@@ -161,7 +163,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(188, 124);
+            comboBox1.Location = new Point(181, 98);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(188, 23);
             comboBox1.TabIndex = 4;
@@ -170,17 +172,17 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(404, 98);
+            label3.Location = new Point(397, 72);
             label3.Name = "label3";
-            label3.Size = new Size(44, 21);
+            label3.Size = new Size(47, 21);
             label3.TabIndex = 5;
-            label3.Text = "Item:";
+            label3.Text = "Parts:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(620, 99);
+            label4.Location = new Point(828, 72);
             label4.Name = "label4";
             label4.Size = new Size(47, 21);
             label4.TabIndex = 7;
@@ -189,7 +191,7 @@
             // textBox2
             // 
             textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(620, 125);
+            textBox2.Location = new Point(828, 98);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(188, 23);
             textBox2.TabIndex = 6;
@@ -197,7 +199,7 @@
             // button4
             // 
             button4.FlatAppearance.BorderColor = Color.Black;
-            button4.Location = new Point(844, 124);
+            button4.Location = new Point(181, 139);
             button4.Name = "button4";
             button4.Size = new Size(156, 26);
             button4.TabIndex = 8;
@@ -210,14 +212,14 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(178, 182);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(895, 407);
@@ -243,11 +245,31 @@
             Column3.Name = "Column3";
             Column3.Width = 58;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(613, 72);
+            label5.Name = "label5";
+            label5.Size = new Size(44, 21);
+            label5.TabIndex = 11;
+            label5.Text = "Item:";
+            // 
+            // textBox3
+            // 
+            textBox3.BorderStyle = BorderStyle.FixedSingle;
+            textBox3.Location = new Point(613, 99);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(188, 23);
+            textBox3.TabIndex = 10;
+            // 
             // Items
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 599);
+            Controls.Add(label5);
+            Controls.Add(textBox3);
             Controls.Add(dataGridView1);
             Controls.Add(button4);
             Controls.Add(label4);
@@ -290,5 +312,7 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private Label label5;
+        private TextBox textBox3;
     }
 }
