@@ -36,9 +36,13 @@
             button2 = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            dataGridView1 = new DataGridView();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -46,18 +50,20 @@
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(169, 0);
+            panel2.Location = new Point(241, 0);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(913, 61);
+            panel2.Size = new Size(1305, 102);
             panel2.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(19, 14);
+            label1.Location = new Point(27, 23);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(319, 32);
+            label1.Size = new Size(477, 48);
             label1.TabIndex = 0;
             label1.Text = "Bike Shop Inventory System";
             // 
@@ -70,8 +76,9 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(169, 599);
+            panel1.Size = new Size(241, 998);
             panel1.TabIndex = 2;
             // 
             // button3
@@ -81,9 +88,10 @@
             button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(0, 217);
+            button3.Location = new Point(0, 362);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(169, 49);
+            button3.Size = new Size(241, 82);
             button3.TabIndex = 5;
             button3.Text = "Dashboard";
             button3.UseVisualStyleBackColor = true;
@@ -95,9 +103,10 @@
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 158);
+            button2.Location = new Point(0, 263);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(169, 49);
+            button2.Size = new Size(241, 82);
             button2.TabIndex = 4;
             button2.Text = "Categories";
             button2.UseVisualStyleBackColor = true;
@@ -110,9 +119,10 @@
             button1.ForeColor = Color.Black;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 98);
+            button1.Location = new Point(0, 163);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(169, 49);
+            button1.Size = new Size(241, 82);
             button1.TabIndex = 3;
             button1.Text = "Items";
             button1.UseVisualStyleBackColor = true;
@@ -120,28 +130,64 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 6);
+            pictureBox1.Location = new Point(60, 10);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(82, 83);
+            pictureBox1.Size = new Size(117, 138);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(268, 181);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(259, 33);
+            comboBox1.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(268, 133);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(115, 32);
+            label3.TabIndex = 6;
+            label3.Text = "Category:";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(268, 247);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new Size(1266, 739);
+            dataGridView1.TabIndex = 7;
+            // 
             // Categories
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 599);
+            ClientSize = new Size(1546, 998);
+            Controls.Add(dataGridView1);
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Categories";
             Text = "Categories";
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -153,5 +199,8 @@
         private Button button2;
         private Button button1;
         private PictureBox pictureBox1;
+        private ComboBox comboBox1;
+        private Label label3;
+        private DataGridView dataGridView1;
     }
 }
