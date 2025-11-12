@@ -16,5 +16,10 @@ namespace BikeShop
         {
             InitializeComponent();
         }
+
+        private void btnItems_Click(object sender, EventArgs e)
+        {
+            // logic blah blah blah
+        }
     }
 }

@@ -34,7 +34,7 @@
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
+            btnItems = new Button();
             pictureBox1 = new PictureBox();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -46,18 +46,20 @@
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(169, 0);
+            panel2.Location = new Point(241, 0);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(913, 61);
+            panel2.Size = new Size(1305, 102);
             panel2.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(19, 14);
+            label1.Location = new Point(27, 23);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(319, 32);
+            label1.Size = new Size(477, 48);
             label1.TabIndex = 0;
             label1.Text = "Bike Shop Inventory System";
             // 
@@ -66,12 +68,13 @@
             panel1.BackColor = Color.Silver;
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnItems);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(169, 599);
+            panel1.Size = new Size(241, 998);
             panel1.TabIndex = 2;
             // 
             // button3
@@ -81,9 +84,10 @@
             button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(0, 217);
+            button3.Location = new Point(0, 362);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(169, 49);
+            button3.Size = new Size(241, 82);
             button3.TabIndex = 5;
             button3.Text = "Dashboard";
             button3.UseVisualStyleBackColor = true;
@@ -95,46 +99,51 @@
             button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 158);
+            button2.Location = new Point(0, 263);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(169, 49);
+            button2.Size = new Size(241, 82);
             button2.TabIndex = 4;
             button2.Text = "Categories";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnItems
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 98);
-            button1.Name = "button1";
-            button1.Size = new Size(169, 49);
-            button1.TabIndex = 3;
-            button1.Text = "Items";
-            button1.UseVisualStyleBackColor = true;
+            btnItems.FlatAppearance.BorderSize = 0;
+            btnItems.FlatStyle = FlatStyle.Flat;
+            btnItems.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnItems.ForeColor = Color.Black;
+            btnItems.Image = (Image)resources.GetObject("btnItems.Image");
+            btnItems.ImageAlign = ContentAlignment.MiddleLeft;
+            btnItems.Location = new Point(0, 163);
+            btnItems.Margin = new Padding(4, 5, 4, 5);
+            btnItems.Name = "btnItems";
+            btnItems.Size = new Size(241, 82);
+            btnItems.TabIndex = 3;
+            btnItems.Text = "Items";
+            btnItems.UseVisualStyleBackColor = true;
+            btnItems.Click += btnItems_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(42, 6);
+            pictureBox1.Location = new Point(60, 10);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(82, 83);
+            pictureBox1.Size = new Size(117, 138);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
             // Categories
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 599);
+            ClientSize = new Size(1546, 998);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Categories";
             Text = "Categories";
             panel2.ResumeLayout(false);
@@ -151,7 +160,7 @@
         private Panel panel1;
         private Button button3;
         private Button button2;
-        private Button button1;
+        private Button btnItems;
         private PictureBox pictureBox1;
     }
 }
