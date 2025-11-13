@@ -35,57 +35,51 @@
             TBpass = new TextBox();
             label2 = new Label();
             panel1 = new Panel();
-            button1 = new Button();
+            btnLogin = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(326, 68);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.Location = new Point(228, 41);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(176, 190);
+            pictureBox1.Size = new Size(123, 114);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(280, 335);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(196, 201);
             label1.Name = "label1";
-            label1.Size = new Size(74, 40);
+            label1.Size = new Size(50, 25);
             label1.TabIndex = 1;
             label1.Text = "User";
             // 
             // TBuser
             // 
-            TBuser.Location = new Point(280, 382);
-            TBuser.Margin = new Padding(4, 5, 4, 5);
+            TBuser.Location = new Point(196, 229);
             TBuser.Name = "TBuser";
-            TBuser.Size = new Size(280, 31);
+            TBuser.Size = new Size(197, 23);
             TBuser.TabIndex = 2;
             // 
             // TBpass
             // 
-            TBpass.Location = new Point(280, 480);
-            TBpass.Margin = new Padding(4, 5, 4, 5);
+            TBpass.Location = new Point(196, 288);
             TBpass.Name = "TBpass";
-            TBpass.Size = new Size(280, 31);
+            TBpass.Size = new Size(197, 23);
             TBpass.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(280, 433);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(196, 260);
             label2.Name = "label2";
-            label2.Size = new Size(136, 40);
+            label2.Size = new Size(91, 25);
             label2.TabIndex = 3;
             label2.Text = "Password";
             // 
@@ -94,28 +88,27 @@
             panel1.BackColor = Color.Silver;
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(149, 672);
+            panel1.Size = new Size(104, 403);
             panel1.TabIndex = 5;
             // 
-            // button1
+            // btnLogin
             // 
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(340, 553);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 58);
-            button1.TabIndex = 6;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = true;
+            btnLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.Location = new Point(238, 332);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(91, 35);
+            btnLogin.TabIndex = 6;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(719, 672);
-            Controls.Add(button1);
+            ClientSize = new Size(503, 403);
+            Controls.Add(btnLogin);
             Controls.Add(panel1);
             Controls.Add(TBpass);
             Controls.Add(label2);
@@ -123,7 +116,6 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Login";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -139,6 +131,6 @@
         private TextBox TBpass;
         private Label label2;
         private Panel panel1;
-        private Button button1;
+        private Button btnLogin;
     }
 }
