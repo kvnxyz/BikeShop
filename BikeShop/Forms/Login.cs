@@ -32,7 +32,8 @@ namespace BikeShop
             {
                 MessageBox.Show("Login Successful!");
                 Items form = new Items();
-                form.ShowDialog();
+                form.Show();
+                this.Hide();
             }
             else
             {

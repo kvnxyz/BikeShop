@@ -16,5 +16,13 @@ namespace BikeShop
         {
             InitializeComponent();
         }
+
+        private void btlogout_Click(object sender, EventArgs e)
+        {
+            Login form = new Login();
+            form.Show();
+            this.Close();
+
+        }
     }
 }
