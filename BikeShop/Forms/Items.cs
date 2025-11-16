@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,12 +29,40 @@ namespace BikeShop
                 this.Close();
             }
             else
-            { 
-                     
+            {
+
             }
             //Login form = new Login();
             //form.Show();
             //this.Close();
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=loginuser;Uid=user;Password=password123;");
+
+            sqlcon.Open();
+
+            string query = "INSERT INTO parts (ItemName, ItemType, BikeCategory, Quantity) VALUES (@ItemName, @ItemType, @BikeCategory, @Quantity)";
+            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+
+            cmd.Parameters.AddWithValue("@ItemName", TBitemName.Text);
+            cmd.Parameters.AddWithValue("@ItemType", TBitemType.Text);
+
+            string radiobtn = "";
+            if (radioButtonMountain.Checked)
+            {
+                radiobtn = "Mountain";
+            }
+            else if (radioButtonRoad.Checked)
+            {
+                radiobtn = "Road";
+            }
+
+            cmd.Parameters.AddWithValue("@BikeCategory", radiobtn);
+
+            cmd.ExecuteNonQuery();
+            sqlcon.Close();
         }
     }
 }

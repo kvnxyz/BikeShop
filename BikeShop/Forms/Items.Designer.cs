@@ -45,10 +45,10 @@
             DataGridItems = new DataGridView();
             label5 = new Label();
             TBitemName = new TextBox();
-            BikeCategoryMountainCB = new CheckBox();
-            BikeCategoryRoadCB = new CheckBox();
             label6 = new Label();
             TBitemQuantityNumeric = new NumericUpDown();
+            radioButtonMountain = new RadioButton();
+            radioButtonRoad = new RadioButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -197,6 +197,7 @@
             btnAddItem.TabIndex = 8;
             btnAddItem.Text = "Add Item";
             btnAddItem.UseVisualStyleBackColor = true;
+            btnAddItem.Click += btnAddItem_Click;
             // 
             // DataGridItems
             // 
@@ -235,30 +236,6 @@
             TBitemName.Size = new Size(188, 23);
             TBitemName.TabIndex = 10;
             // 
-            // BikeCategoryMountainCB
-            // 
-            BikeCategoryMountainCB.AutoSize = true;
-            BikeCategoryMountainCB.Font = new Font("Segoe UI", 14.25F);
-            BikeCategoryMountainCB.Location = new Point(188, 100);
-            BikeCategoryMountainCB.Margin = new Padding(2);
-            BikeCategoryMountainCB.Name = "BikeCategoryMountainCB";
-            BikeCategoryMountainCB.Size = new Size(113, 29);
-            BikeCategoryMountainCB.TabIndex = 12;
-            BikeCategoryMountainCB.Text = "Mountain";
-            BikeCategoryMountainCB.UseVisualStyleBackColor = true;
-            // 
-            // BikeCategoryRoadCB
-            // 
-            BikeCategoryRoadCB.AutoSize = true;
-            BikeCategoryRoadCB.Font = new Font("Segoe UI", 14.25F);
-            BikeCategoryRoadCB.Location = new Point(188, 133);
-            BikeCategoryRoadCB.Margin = new Padding(2);
-            BikeCategoryRoadCB.Name = "BikeCategoryRoadCB";
-            BikeCategoryRoadCB.Size = new Size(73, 29);
-            BikeCategoryRoadCB.TabIndex = 13;
-            BikeCategoryRoadCB.Text = "Road";
-            BikeCategoryRoadCB.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             label6.AutoSize = true;
@@ -277,15 +254,39 @@
             TBitemQuantityNumeric.Size = new Size(188, 23);
             TBitemQuantityNumeric.TabIndex = 17;
             // 
+            // radioButtonMountain
+            // 
+            radioButtonMountain.AutoSize = true;
+            radioButtonMountain.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            radioButtonMountain.Location = new Point(188, 100);
+            radioButtonMountain.Name = "radioButtonMountain";
+            radioButtonMountain.Size = new Size(95, 25);
+            radioButtonMountain.TabIndex = 18;
+            radioButtonMountain.TabStop = true;
+            radioButtonMountain.Text = "Mountain";
+            radioButtonMountain.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonRoad
+            // 
+            radioButtonRoad.AutoSize = true;
+            radioButtonRoad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            radioButtonRoad.Location = new Point(188, 131);
+            radioButtonRoad.Name = "radioButtonRoad";
+            radioButtonRoad.Size = new Size(64, 25);
+            radioButtonRoad.TabIndex = 19;
+            radioButtonRoad.TabStop = true;
+            radioButtonRoad.Text = "Road";
+            radioButtonRoad.UseVisualStyleBackColor = true;
+            // 
             // Items
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 599);
+            Controls.Add(radioButtonRoad);
+            Controls.Add(radioButtonMountain);
             Controls.Add(TBitemQuantityNumeric);
             Controls.Add(label6);
-            Controls.Add(BikeCategoryRoadCB);
-            Controls.Add(BikeCategoryMountainCB);
             Controls.Add(label5);
             Controls.Add(TBitemName);
             Controls.Add(DataGridItems);
@@ -323,11 +324,11 @@
         private DataGridView DataGridItems;
         private Label label5;
         private TextBox TBitemName;
-        private CheckBox BikeCategoryMountainCB;
-        private CheckBox BikeCategoryRoadCB;
         private Label label6;
         private NumericUpDown TBitemQuantityNumeric;
         private Button button3;
         private Button button2;
+        private RadioButton radioButtonMountain;
+        private RadioButton radioButtonRoad;
     }
 }
