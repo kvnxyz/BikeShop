@@ -19,9 +19,23 @@ namespace BikeShop
 
         private void btlogout_Click(object sender, EventArgs e)
         {
-            Login form = new Login();
-            form.Show();
-            this.Close();
+            string message = "Do you want to logout?";
+            string title = "Close window";
+            MessageBoxButtons button = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, button);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            { 
+            
+            
+            }
+
+            //Login form = new Login();
+            //form.Show();
+            //this.Close();
 
         }
     }
