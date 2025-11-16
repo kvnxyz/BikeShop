@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
             btlogout = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
+            TBitemType = new TextBox();
             label3 = new Label();
-            button4 = new Button();
-            dataGridView1 = new DataGridView();
+            btnAddItem = new Button();
+            DataGridItems = new DataGridView();
             label5 = new Label();
-            textBox3 = new TextBox();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
+            TBitemName = new TextBox();
+            BikeCategoryMountainCB = new CheckBox();
+            BikeCategoryRoadCB = new CheckBox();
             label6 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            button2 = new Button();
-            button3 = new Button();
+            TBitemQuantityNumeric = new NumericUpDown();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridItems).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TBitemQuantityNumeric).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -69,6 +69,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(169, 599);
             panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Black;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.MiddleLeft;
+            button3.Location = new Point(0, 217);
+            button3.Name = "button3";
+            button3.Size = new Size(169, 49);
+            button3.TabIndex = 6;
+            button3.Text = "Accessories";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Black;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(0, 162);
+            button2.Name = "button2";
+            button2.Size = new Size(169, 49);
+            button2.TabIndex = 5;
+            button2.Text = "Products";
+            button2.UseVisualStyleBackColor = true;
             // 
             // btlogout
             // 
@@ -140,13 +170,13 @@
             label2.TabIndex = 2;
             label2.Text = "Bike Category:";
             // 
-            // textBox1
+            // TBitemType
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(355, 100);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(188, 23);
-            textBox1.TabIndex = 3;
+            TBitemType.BorderStyle = BorderStyle.FixedSingle;
+            TBitemType.Location = new Point(355, 100);
+            TBitemType.Name = "TBitemType";
+            TBitemType.Size = new Size(188, 23);
+            TBitemType.TabIndex = 3;
             // 
             // label3
             // 
@@ -158,34 +188,34 @@
             label3.TabIndex = 5;
             label3.Text = "Item Type:";
             // 
-            // button4
+            // btnAddItem
             // 
-            button4.FlatAppearance.BorderColor = Color.Black;
-            button4.Location = new Point(355, 143);
-            button4.Name = "button4";
-            button4.Size = new Size(188, 26);
-            button4.TabIndex = 8;
-            button4.Text = "Add Item";
-            button4.UseVisualStyleBackColor = true;
+            btnAddItem.FlatAppearance.BorderColor = Color.Black;
+            btnAddItem.Location = new Point(355, 143);
+            btnAddItem.Name = "btnAddItem";
+            btnAddItem.Size = new Size(188, 26);
+            btnAddItem.TabIndex = 8;
+            btnAddItem.Text = "Add Item";
+            btnAddItem.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DataGridItems
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.Location = new Point(178, 182);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(895, 409);
-            dataGridView1.TabIndex = 9;
+            DataGridItems.AllowUserToAddRows = false;
+            DataGridItems.BackgroundColor = Color.White;
+            DataGridItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            DataGridItems.DefaultCellStyle = dataGridViewCellStyle2;
+            DataGridItems.Location = new Point(178, 182);
+            DataGridItems.Name = "DataGridItems";
+            DataGridItems.RowHeadersWidth = 62;
+            DataGridItems.Size = new Size(895, 409);
+            DataGridItems.TabIndex = 9;
             // 
             // label5
             // 
@@ -197,37 +227,37 @@
             label5.TabIndex = 11;
             label5.Text = "Item Name:";
             // 
-            // textBox3
+            // TBitemName
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(570, 100);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(188, 23);
-            textBox3.TabIndex = 10;
+            TBitemName.BorderStyle = BorderStyle.FixedSingle;
+            TBitemName.Location = new Point(570, 100);
+            TBitemName.Name = "TBitemName";
+            TBitemName.Size = new Size(188, 23);
+            TBitemName.TabIndex = 10;
             // 
-            // checkBox1
+            // BikeCategoryMountainCB
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Font = new Font("Segoe UI", 14.25F);
-            checkBox1.Location = new Point(188, 100);
-            checkBox1.Margin = new Padding(2);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(113, 29);
-            checkBox1.TabIndex = 12;
-            checkBox1.Text = "Mountain";
-            checkBox1.UseVisualStyleBackColor = true;
+            BikeCategoryMountainCB.AutoSize = true;
+            BikeCategoryMountainCB.Font = new Font("Segoe UI", 14.25F);
+            BikeCategoryMountainCB.Location = new Point(188, 100);
+            BikeCategoryMountainCB.Margin = new Padding(2);
+            BikeCategoryMountainCB.Name = "BikeCategoryMountainCB";
+            BikeCategoryMountainCB.Size = new Size(113, 29);
+            BikeCategoryMountainCB.TabIndex = 12;
+            BikeCategoryMountainCB.Text = "Mountain";
+            BikeCategoryMountainCB.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // BikeCategoryRoadCB
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Font = new Font("Segoe UI", 14.25F);
-            checkBox2.Location = new Point(188, 127);
-            checkBox2.Margin = new Padding(2);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(73, 29);
-            checkBox2.TabIndex = 13;
-            checkBox2.Text = "Road";
-            checkBox2.UseVisualStyleBackColor = true;
+            BikeCategoryRoadCB.AutoSize = true;
+            BikeCategoryRoadCB.Font = new Font("Segoe UI", 14.25F);
+            BikeCategoryRoadCB.Location = new Point(188, 133);
+            BikeCategoryRoadCB.Margin = new Padding(2);
+            BikeCategoryRoadCB.Name = "BikeCategoryRoadCB";
+            BikeCategoryRoadCB.Size = new Size(73, 29);
+            BikeCategoryRoadCB.TabIndex = 13;
+            BikeCategoryRoadCB.Text = "Road";
+            BikeCategoryRoadCB.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -239,59 +269,29 @@
             label6.TabIndex = 16;
             label6.Text = "Item Quantity:";
             // 
-            // numericUpDown1
+            // TBitemQuantityNumeric
             // 
-            numericUpDown1.Location = new Point(779, 100);
-            numericUpDown1.Margin = new Padding(2);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(188, 23);
-            numericUpDown1.TabIndex = 17;
-            // 
-            // button2
-            // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 162);
-            button2.Name = "button2";
-            button2.Size = new Size(169, 49);
-            button2.TabIndex = 5;
-            button2.Text = "Products";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(0, 217);
-            button3.Name = "button3";
-            button3.Size = new Size(169, 49);
-            button3.TabIndex = 6;
-            button3.Text = "Accessories";
-            button3.UseVisualStyleBackColor = true;
+            TBitemQuantityNumeric.Location = new Point(779, 100);
+            TBitemQuantityNumeric.Margin = new Padding(2);
+            TBitemQuantityNumeric.Name = "TBitemQuantityNumeric";
+            TBitemQuantityNumeric.Size = new Size(188, 23);
+            TBitemQuantityNumeric.TabIndex = 17;
             // 
             // Items
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 599);
-            Controls.Add(numericUpDown1);
+            Controls.Add(TBitemQuantityNumeric);
             Controls.Add(label6);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(BikeCategoryRoadCB);
+            Controls.Add(BikeCategoryMountainCB);
             Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(dataGridView1);
-            Controls.Add(button4);
+            Controls.Add(TBitemName);
+            Controls.Add(DataGridItems);
+            Controls.Add(btnAddItem);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(TBitemType);
             Controls.Add(label2);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -302,8 +302,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridItems).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TBitemQuantityNumeric).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -317,16 +317,16 @@
         private Button btlogout;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox TBitemType;
         private Label label3;
-        private Button button4;
-        private DataGridView dataGridView1;
+        private Button btnAddItem;
+        private DataGridView DataGridItems;
         private Label label5;
-        private TextBox textBox3;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private TextBox TBitemName;
+        private CheckBox BikeCategoryMountainCB;
+        private CheckBox BikeCategoryRoadCB;
         private Label label6;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown TBitemQuantityNumeric;
         private Button button3;
         private Button button2;
     }

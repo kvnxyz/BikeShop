@@ -29,14 +29,11 @@ namespace BikeShop
             }
             else
             { 
-            
-            
+                     
             }
-
             //Login form = new Login();
             //form.Show();
             //this.Close();
-
         }
     }
 }
