@@ -36,6 +36,7 @@
             label2 = new Label();
             panel1 = new Panel();
             btnLogin = new Button();
+            exitbtn = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -72,6 +73,7 @@
             TBpass.Name = "TBpass";
             TBpass.Size = new Size(197, 23);
             TBpass.TabIndex = 4;
+            TBpass.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -103,11 +105,24 @@
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
+            // exitbtn
+            // 
+            exitbtn.FlatAppearance.BorderSize = 0;
+            exitbtn.FlatStyle = FlatStyle.Flat;
+            exitbtn.Image = (Image)resources.GetObject("exitbtn.Image");
+            exitbtn.Location = new Point(477, 1);
+            exitbtn.Name = "exitbtn";
+            exitbtn.Size = new Size(25, 25);
+            exitbtn.TabIndex = 7;
+            exitbtn.UseVisualStyleBackColor = true; 
+            exitbtn.Click += exitbtn_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(503, 403);
+            Controls.Add(exitbtn);
             Controls.Add(btnLogin);
             Controls.Add(panel1);
             Controls.Add(TBpass);
@@ -132,5 +147,6 @@
         private Label label2;
         private Panel panel1;
         private Button btnLogin;
+        private Button exitbtn;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -49,6 +49,7 @@
             TBitemQuantityNumeric = new NumericUpDown();
             radioButtonMountain = new RadioButton();
             radioButtonRoad = new RadioButton();
+            btnRefresh = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -204,14 +205,14 @@
             DataGridItems.AllowUserToAddRows = false;
             DataGridItems.BackgroundColor = Color.White;
             DataGridItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            DataGridItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            DataGridItems.DefaultCellStyle = dataGridViewCellStyle1;
             DataGridItems.Location = new Point(178, 182);
             DataGridItems.Name = "DataGridItems";
             DataGridItems.RowHeadersWidth = 62;
@@ -278,11 +279,22 @@
             radioButtonRoad.Text = "Road";
             radioButtonRoad.UseVisualStyleBackColor = true;
             // 
+            // btnRefresh
+            // 
+            btnRefresh.Location = new Point(570, 143);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(188, 26);
+            btnRefresh.TabIndex = 20;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
             // Items
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 599);
+            Controls.Add(btnRefresh);
             Controls.Add(radioButtonRoad);
             Controls.Add(radioButtonMountain);
             Controls.Add(TBitemQuantityNumeric);
@@ -330,5 +342,6 @@
         private Button button2;
         private RadioButton radioButtonMountain;
         private RadioButton radioButtonRoad;
+        private Button btnRefresh;
     }
 }

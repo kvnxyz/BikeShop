@@ -16,7 +16,7 @@ namespace BikeShop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=loginuser;Uid=user;Password=password123;");
+            MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
             sqlcon.Open();
 
             string query = "SELECT COUNT(*) FROM accounts WHERE Email=@Email AND Password=@Password";
@@ -38,6 +38,22 @@ namespace BikeShop
             else
             {
                 MessageBox.Show("Invalid email or password!");
+            }
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to EXIT the program?";
+            string title = "Close window";
+            MessageBoxButtons button = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, button);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
             }
         }
     }

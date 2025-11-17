@@ -26,24 +26,22 @@ namespace BikeShop
             DialogResult result = MessageBox.Show(message, title, button);
             if (result == DialogResult.Yes)
             {
+                Login form = new Login();
+                form.Show();
                 this.Close();
             }
             else
             {
 
             }
-            //Login form = new Login();
-            //form.Show();
-            //this.Close();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=loginuser;Uid=user;Password=password123;");
-
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
             sqlcon.Open();
 
-            string query = "INSERT INTO parts (ItemName, ItemType, BikeCategory, Quantity) VALUES (@ItemName, @ItemType, @BikeCategory, @Quantity)";
+            string query = "INSERT INTO parts (ItemName, ItemType, BikeCategory) VALUES (@ItemName, @ItemType, @BikeCategory)";
             using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
 
             cmd.Parameters.AddWithValue("@ItemName", TBitemName.Text);
@@ -63,6 +61,18 @@ namespace BikeShop
 
             cmd.ExecuteNonQuery();
             sqlcon.Close();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
+            sqlcon.Open();
+            string query = "SELECT * FROM parts";
+            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+            MySqlDataAdapter itemsda = new MySqlDataAdapter(cmd);
+            DataTable itemdt = new DataTable();
+            itemsda.Fill(itemdt);
+            DataGridItems.DataSource = itemdt;
         }
     }
 }
