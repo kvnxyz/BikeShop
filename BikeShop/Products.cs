@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BikeShop.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BikeShop.Forms
+namespace BikeShop
 {
-    public partial class Accessories : Form
+    public partial class Products : Form
     {
-        public Accessories()
+        public Products()
         {
             InitializeComponent();
         }
@@ -20,6 +21,13 @@ namespace BikeShop.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             Items form = new Items();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Accessories form = new Accessories();
             form.Show();
             this.Hide();
         }

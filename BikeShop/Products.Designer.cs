@@ -1,6 +1,6 @@
-﻿namespace BikeShop.Forms
+﻿namespace BikeShop
 {
-    partial class Accessories
+    partial class Products
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accessories));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
+            panel2 = new Panel();
+            label1 = new Label();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
             btlogout = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
-            label1 = new Label();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.Controls.Add(label1);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(169, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(913, 61);
+            panel2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(19, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(443, 32);
+            label1.TabIndex = 0;
+            label1.Text = "Alon's Hub Bike Shop Inventory System";
             // 
             // panel1
             // 
@@ -54,7 +74,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(169, 599);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 4;
             // 
             // button3
             // 
@@ -70,6 +90,7 @@
             button3.TabIndex = 6;
             button3.Text = "Accessories";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -127,27 +148,7 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(224, 224, 224);
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(169, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(913, 61);
-            panel2.TabIndex = 3;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(19, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(443, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Alon's Hub Bike Shop Inventory System";
-            // 
-            // Accessories
+            // Products
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -155,25 +156,24 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2);
-            Name = "Accessories";
+            Name = "Products";
             Text = "Products";
-            panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private Panel panel2;
+        private Label label1;
         private Panel panel1;
         private Button button3;
         private Button button2;
         private Button btlogout;
         private Button button1;
         private PictureBox pictureBox1;
-        private Panel panel2;
-        private Label label1;
     }
 }

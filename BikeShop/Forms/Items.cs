@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using BikeShop.Forms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -99,6 +100,13 @@ namespace BikeShop
             {
                 MessageBox.Show("Please select an item to delete.");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Accessories form = new Accessories();
+            form.Show();
+            this.Hide();
         }
     }
 }
