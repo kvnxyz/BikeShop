@@ -42,7 +42,7 @@ namespace BikeShop
             using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
             sqlcon.Open();
 
-            string query = "INSERT INTO parts (ItemName, ItemType, BikeCategory) VALUES (@ItemName, @ItemType, @BikeCategory)";
+            string query = "INSERT INTO parts (ItemName, ItemType, BikeCategory, Quantity) VALUES (@ItemName, @ItemType, @BikeCategory, @Quantity)";
             using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
 
             cmd.Parameters.AddWithValue("@ItemName", TBitemName.Text);
@@ -60,8 +60,12 @@ namespace BikeShop
 
             cmd.Parameters.AddWithValue("@BikeCategory", radiobtn);
 
+            cmd.Parameters.AddWithValue("@Quantity", (int)TBitemQuantityNumeric.Value);
+
             cmd.ExecuteNonQuery();
             sqlcon.Close();
+
+            MessageBox.Show("Item Added Successfully!");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
