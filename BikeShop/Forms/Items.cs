@@ -65,7 +65,7 @@ namespace BikeShop
             cmd.ExecuteNonQuery();
             sqlcon.Close();
 
-            MessageBox.Show("Item Added Successfully!");
+            MessageBox.Show("Item Added");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -78,27 +78,30 @@ namespace BikeShop
             DataTable itemdt = new DataTable();
             itemsda.Fill(itemdt);
             DataGridItems.DataSource = itemdt;
+
+            this.DataGridItems.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
         private void btndeleteitem_Click(object sender, EventArgs e)
         {
             if (DataGridItems.SelectedRows.Count > 0)
-            {
+                {
+                    {
+            int id = Convert.ToInt32(DataGridItems.SelectedRows[0].Cells["PartID"].Value);
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
+            sqlcon.Open();
+            string query = "DELETE FROM parts WHERE PartID = @id";
+            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
 
-                {
-                    int id = Convert.ToInt32(DataGridItems.SelectedRows[0].Cells["PartID"].Value);
-                    using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
-                    sqlcon.Open();
-                    string query = "DELETE FROM parts WHERE PartID = @id";
-                    using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
-                    cmd.Parameters.AddWithValue("@id", id);
-                    cmd.ExecuteNonQuery();
-                }
+            }
                 foreach (DataGridViewRow row in DataGridItems.SelectedRows)
-                {
-                    DataGridItems.Rows.Remove(row);
-                }
+            {
+                DataGridItems.Rows.Remove(row);
+            }
+
             }
             else
             {

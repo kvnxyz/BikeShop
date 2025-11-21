@@ -37,9 +37,12 @@
             btlogout = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            DataGridProducts = new DataGridView();
+            btnRefreshproducts = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridProducts).BeginInit();
             SuspendLayout();
             // 
             // panel2
@@ -150,20 +153,44 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
+            // DataGridProducts
+            // 
+            DataGridProducts.BackgroundColor = Color.White;
+            DataGridProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataGridProducts.Location = new Point(179, 165);
+            DataGridProducts.Name = "DataGridProducts";
+            DataGridProducts.Size = new Size(895, 425);
+            DataGridProducts.TabIndex = 6;
+            DataGridProducts.CellContentClick += DataGridProducts_CellContentClick;
+            // 
+            // btnRefreshproducts
+            // 
+            btnRefreshproducts.Location = new Point(920, 81);
+            btnRefreshproducts.Name = "btnRefreshproducts";
+            btnRefreshproducts.Size = new Size(154, 60);
+            btnRefreshproducts.TabIndex = 7;
+            btnRefreshproducts.Text = "Refresh";
+            btnRefreshproducts.UseVisualStyleBackColor = true;
+            btnRefreshproducts.Click += btnRefreshproducts_Click;
+            // 
             // Products
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1082, 599);
+            Controls.Add(btnRefreshproducts);
+            Controls.Add(DataGridProducts);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Products";
             Text = "Products";
+            Load += Products_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataGridProducts).EndInit();
             ResumeLayout(false);
         }
 
@@ -177,5 +204,7 @@
         private Button btlogout;
         private Button button1;
         private PictureBox pictureBox1;
+        private DataGridView DataGridProducts;
+        private Button btnRefreshproducts;
     }
 }

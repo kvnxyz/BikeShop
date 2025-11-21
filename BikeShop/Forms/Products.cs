@@ -1,4 +1,5 @@
 ﻿using BikeShop.Forms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,6 +49,31 @@ namespace BikeShop
             {
 
             }
+        }
+
+        private void Products_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRefreshproducts_Click(object sender, EventArgs e)
+        {
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
+            sqlcon.Open();
+            string query = "SELECT * FROM products";
+            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+            MySqlDataAdapter itemsda = new MySqlDataAdapter(cmd);
+            DataTable itemdt = new DataTable();
+            itemsda.Fill(itemdt);
+            DataGridProducts.DataSource = itemdt;
+
+            this.DataGridProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+        }
+
+        private void DataGridProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
