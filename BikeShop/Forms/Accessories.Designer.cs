@@ -164,7 +164,7 @@
             // 
             DataGridAccessories.BackgroundColor = SystemColors.ButtonHighlight;
             DataGridAccessories.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridAccessories.Location = new Point(268, 253);
+            DataGridAccessories.Location = new Point(309, 224);
             DataGridAccessories.Name = "DataGridAccessories";
             DataGridAccessories.RowHeadersWidth = 62;
             DataGridAccessories.Size = new Size(1237, 723);
