@@ -58,6 +58,7 @@
             // 
             // button3
             // 
+            button3.BackColor = Color.Gray;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -69,7 +70,7 @@
             button3.Size = new Size(169, 49);
             button3.TabIndex = 6;
             button3.Text = "Accessories";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -85,6 +86,7 @@
             button2.TabIndex = 5;
             button2.Text = "Products";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // btlogout
             // 

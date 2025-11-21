@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -102,6 +102,7 @@
             button2.TabIndex = 5;
             button2.Text = "Products";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // btlogout
             // 
@@ -120,6 +121,7 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.Gray;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -131,7 +133,7 @@
             button1.Size = new Size(169, 49);
             button1.TabIndex = 3;
             button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -207,14 +209,14 @@
             DataGridItems.AllowUserToAddRows = false;
             DataGridItems.BackgroundColor = Color.White;
             DataGridItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            DataGridItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            DataGridItems.DefaultCellStyle = dataGridViewCellStyle2;
             DataGridItems.Location = new Point(178, 182);
             DataGridItems.Name = "DataGridItems";
             DataGridItems.RowHeadersWidth = 62;
@@ -252,7 +254,7 @@
             // TBitemQuantityNumeric
             // 
             TBitemQuantityNumeric.Location = new Point(779, 100);
-            TBitemQuantityNumeric.Margin = new Padding(2, 2, 2, 2);
+            TBitemQuantityNumeric.Margin = new Padding(2);
             TBitemQuantityNumeric.Name = "TBitemQuantityNumeric";
             TBitemQuantityNumeric.Size = new Size(188, 23);
             TBitemQuantityNumeric.TabIndex = 17;
@@ -293,7 +295,7 @@
             // btndeleteitem
             // 
             btndeleteitem.Location = new Point(779, 143);
-            btndeleteitem.Margin = new Padding(2, 2, 2, 2);
+            btndeleteitem.Margin = new Padding(2);
             btndeleteitem.Name = "btndeleteitem";
             btndeleteitem.Size = new Size(188, 26);
             btndeleteitem.TabIndex = 21;
