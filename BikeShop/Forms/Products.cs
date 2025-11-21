@@ -68,7 +68,6 @@ namespace BikeShop
             DataGridProducts.DataSource = itemdt;
 
             this.DataGridProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
         }
 
         private void DataGridProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)

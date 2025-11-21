@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,20 @@ namespace BikeShop.Forms
             Products form = new Products();
             form.Show();
             this.Hide();
+        }
+
+        private void btnRefreshAccessories_Click(object sender, EventArgs e)
+        {
+            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
+            sqlcon.Open();
+            string query = "SELECT * FROM accessories";
+            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+            MySqlDataAdapter itemsda = new MySqlDataAdapter(cmd);
+            DataTable itemdt = new DataTable();
+            itemsda.Fill(itemdt);
+            DataGridAccessories.DataSource = itemdt;
+
+            this.DataGridAccessories.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
