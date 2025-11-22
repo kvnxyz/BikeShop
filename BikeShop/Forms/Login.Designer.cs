@@ -43,7 +43,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(228, 41);
+            pictureBox1.Location = new Point(207, 34);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(123, 114);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -54,7 +54,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(196, 201);
+            label1.Location = new Point(172, 202);
             label1.Name = "label1";
             label1.Size = new Size(50, 25);
             label1.TabIndex = 1;
@@ -62,14 +62,14 @@
             // 
             // TBuser
             // 
-            TBuser.Location = new Point(196, 229);
+            TBuser.Location = new Point(172, 230);
             TBuser.Name = "TBuser";
             TBuser.Size = new Size(197, 23);
             TBuser.TabIndex = 2;
             // 
             // TBpass
             // 
-            TBpass.Location = new Point(196, 288);
+            TBpass.Location = new Point(172, 289);
             TBpass.Name = "TBpass";
             TBpass.Size = new Size(197, 23);
             TBpass.TabIndex = 4;
@@ -79,7 +79,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(196, 260);
+            label2.Location = new Point(172, 261);
             label2.Name = "label2";
             label2.Size = new Size(91, 25);
             label2.TabIndex = 3;
@@ -97,9 +97,9 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(238, 332);
+            btnLogin.Location = new Point(204, 331);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(91, 35);
+            btnLogin.Size = new Size(123, 35);
             btnLogin.TabIndex = 6;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
@@ -110,18 +110,18 @@
             exitbtn.FlatAppearance.BorderSize = 0;
             exitbtn.FlatStyle = FlatStyle.Flat;
             exitbtn.Image = (Image)resources.GetObject("exitbtn.Image");
-            exitbtn.Location = new Point(477, 1);
+            exitbtn.Location = new Point(422, 0);
             exitbtn.Name = "exitbtn";
             exitbtn.Size = new Size(25, 25);
             exitbtn.TabIndex = 7;
-            exitbtn.UseVisualStyleBackColor = true; 
+            exitbtn.UseVisualStyleBackColor = true;
             exitbtn.Click += exitbtn_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 403);
+            ClientSize = new Size(447, 403);
             Controls.Add(exitbtn);
             Controls.Add(btnLogin);
             Controls.Add(panel1);

@@ -57,11 +57,9 @@ namespace BikeShop
             {
                 radiobtn = "Road";
             }
-
             cmd.Parameters.AddWithValue("@BikeCategory", radiobtn);
 
             cmd.Parameters.AddWithValue("@Quantity", (int)TBitemQuantityNumeric.Value);
-
             cmd.ExecuteNonQuery();
             sqlcon.Close();
 
