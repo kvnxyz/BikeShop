@@ -62,6 +62,8 @@
             // 
             // TBuser
             // 
+            TBuser.BackColor = Color.FromArgb(237, 232, 208);
+            TBuser.BorderStyle = BorderStyle.FixedSingle;
             TBuser.Location = new Point(172, 230);
             TBuser.Name = "TBuser";
             TBuser.Size = new Size(197, 23);
@@ -69,6 +71,8 @@
             // 
             // TBpass
             // 
+            TBpass.BackColor = Color.FromArgb(237, 232, 208);
+            TBpass.BorderStyle = BorderStyle.FixedSingle;
             TBpass.Location = new Point(172, 289);
             TBpass.Name = "TBpass";
             TBpass.Size = new Size(197, 23);
@@ -87,7 +91,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Silver;
+            panel1.BackColor = Color.FromArgb(4, 68, 128);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -96,13 +100,16 @@
             // 
             // btnLogin
             // 
+            btnLogin.BackColor = Color.FromArgb(237, 232, 208);
+            btnLogin.FlatAppearance.BorderColor = Color.Black;
+            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogin.Location = new Point(204, 331);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(123, 35);
             btnLogin.TabIndex = 6;
             btnLogin.Text = "Login";
-            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // exitbtn
@@ -121,6 +128,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
             ClientSize = new Size(447, 403);
             Controls.Add(exitbtn);
             Controls.Add(btnLogin);
