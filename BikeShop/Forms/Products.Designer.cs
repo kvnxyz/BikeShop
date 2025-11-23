@@ -47,7 +47,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(224, 224, 224);
+            panel2.BackColor = Color.FromArgb(42, 113, 57);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(169, 0);
@@ -59,6 +59,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(19, 14);
             label1.Name = "label1";
             label1.Size = new Size(443, 32);
@@ -67,7 +68,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Silver;
+            panel1.BackColor = Color.FromArgb(11, 42, 69);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(btlogout);
@@ -81,14 +82,14 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.Silver;
+            button3.BackColor = Color.FromArgb(11, 42, 69);
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.Black;
+            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.White;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(0, 217);
+            button3.Location = new Point(0, 237);
             button3.Name = "button3";
             button3.Size = new Size(169, 49);
             button3.TabIndex = 6;
@@ -98,14 +99,14 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.Gray;
+            button2.BackColor = Color.FromArgb(42, 113, 57);
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
+            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 162);
+            button2.Location = new Point(0, 292);
             button2.Name = "button2";
             button2.Size = new Size(169, 49);
             button2.TabIndex = 5;
@@ -116,7 +117,8 @@
             // 
             btlogout.FlatAppearance.BorderSize = 0;
             btlogout.FlatStyle = FlatStyle.Flat;
-            btlogout.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btlogout.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btlogout.ForeColor = Color.White;
             btlogout.Image = (Image)resources.GetObject("btlogout.Image");
             btlogout.ImageAlign = ContentAlignment.MiddleLeft;
             btlogout.Location = new Point(0, 548);
@@ -131,11 +133,11 @@
             // 
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
+            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 107);
+            button1.Location = new Point(0, 182);
             button1.Name = "button1";
             button1.Size = new Size(169, 49);
             button1.TabIndex = 3;
@@ -146,9 +148,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(30, 3);
+            pictureBox1.Location = new Point(17, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(108, 101);
+            pictureBox1.Size = new Size(135, 135);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -157,20 +159,24 @@
             // 
             DataGridProducts.BackgroundColor = Color.White;
             DataGridProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridProducts.Location = new Point(179, 165);
+            DataGridProducts.Location = new Point(178, 182);
             DataGridProducts.Name = "DataGridProducts";
-            DataGridProducts.Size = new Size(895, 425);
+            DataGridProducts.Size = new Size(895, 409);
             DataGridProducts.TabIndex = 6;
             DataGridProducts.CellContentClick += DataGridProducts_CellContentClick;
             // 
             // btnRefreshproducts
             // 
-            btnRefreshproducts.Location = new Point(920, 81);
+            btnRefreshproducts.BackColor = Color.FromArgb(11, 42, 69);
+            btnRefreshproducts.FlatStyle = FlatStyle.Flat;
+            btnRefreshproducts.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRefreshproducts.ForeColor = Color.White;
+            btnRefreshproducts.Location = new Point(919, 93);
             btnRefreshproducts.Name = "btnRefreshproducts";
             btnRefreshproducts.Size = new Size(154, 60);
             btnRefreshproducts.TabIndex = 7;
             btnRefreshproducts.Text = "Refresh";
-            btnRefreshproducts.UseVisualStyleBackColor = true;
+            btnRefreshproducts.UseVisualStyleBackColor = false;
             btnRefreshproducts.Click += btnRefreshproducts_Click;
             // 
             // Products

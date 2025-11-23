@@ -62,7 +62,7 @@
             // 
             // TBuser
             // 
-            TBuser.BackColor = Color.FromArgb(237, 232, 208);
+            TBuser.BackColor = Color.White;
             TBuser.BorderStyle = BorderStyle.FixedSingle;
             TBuser.Location = new Point(172, 230);
             TBuser.Name = "TBuser";
@@ -71,7 +71,7 @@
             // 
             // TBpass
             // 
-            TBpass.BackColor = Color.FromArgb(237, 232, 208);
+            TBpass.BackColor = Color.White;
             TBpass.BorderStyle = BorderStyle.FixedSingle;
             TBpass.Location = new Point(172, 289);
             TBpass.Name = "TBpass";
@@ -91,7 +91,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(4, 68, 128);
+            panel1.BackColor = Color.FromArgb(11, 42, 69);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -100,10 +100,11 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.FromArgb(237, 232, 208);
+            btnLogin.BackColor = Color.FromArgb(11, 42, 69);
             btnLogin.FlatAppearance.BorderColor = Color.Black;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(204, 331);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(123, 35);
@@ -128,7 +129,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGray;
+            BackColor = Color.FromArgb(245, 247, 248);
             ClientSize = new Size(447, 403);
             Controls.Add(exitbtn);
             Controls.Add(btnLogin);
