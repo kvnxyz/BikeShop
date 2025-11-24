@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -85,6 +85,7 @@
             button3.Size = new Size(169, 49);
             button3.TabIndex = 6;
             button3.Text = "Accessories";
+            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -101,6 +102,7 @@
             button2.Size = new Size(169, 49);
             button2.TabIndex = 5;
             button2.Text = "Products";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -134,6 +136,7 @@
             button1.Size = new Size(169, 49);
             button1.TabIndex = 3;
             button1.Text = "Dashboard";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
@@ -171,7 +174,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(181, 72);
+            label2.Location = new Point(178, 74);
             label2.Name = "label2";
             label2.Size = new Size(132, 25);
             label2.TabIndex = 2;
@@ -215,14 +218,14 @@
             DataGridItems.AllowUserToAddRows = false;
             DataGridItems.BackgroundColor = Color.White;
             DataGridItems.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Silver;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            DataGridItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Silver;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            DataGridItems.DefaultCellStyle = dataGridViewCellStyle4;
             DataGridItems.Location = new Point(178, 182);
             DataGridItems.Name = "DataGridItems";
             DataGridItems.RowHeadersWidth = 62;
@@ -267,8 +270,8 @@
             // 
             // radioButtonMountain
             // 
-            radioButtonMountain.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonMountain.Location = new Point(188, 100);
+            radioButtonMountain.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButtonMountain.Location = new Point(188, 115);
             radioButtonMountain.Name = "radioButtonMountain";
             radioButtonMountain.Size = new Size(100, 22);
             radioButtonMountain.TabIndex = 18;
@@ -279,10 +282,10 @@
             // radioButtonRoad
             // 
             radioButtonRoad.AutoSize = true;
-            radioButtonRoad.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonRoad.Location = new Point(188, 131);
+            radioButtonRoad.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            radioButtonRoad.Location = new Point(188, 143);
             radioButtonRoad.Name = "radioButtonRoad";
-            radioButtonRoad.Size = new Size(64, 25);
+            radioButtonRoad.Size = new Size(66, 25);
             radioButtonRoad.TabIndex = 19;
             radioButtonRoad.TabStop = true;
             radioButtonRoad.Text = "Road";
