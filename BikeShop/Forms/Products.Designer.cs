@@ -39,6 +39,7 @@
             pictureBox1 = new PictureBox();
             DataGridProducts = new DataGridView();
             btnRefreshproducts = new Button();
+            exitbtn = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -48,11 +49,13 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(42, 113, 57);
+            panel2.Controls.Add(exitbtn);
             panel2.Controls.Add(label1);
             panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(169, 0);
+            panel2.Location = new Point(241, 0);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(913, 61);
+            panel2.Size = new Size(1305, 102);
             panel2.TabIndex = 5;
             // 
             // label1
@@ -60,9 +63,10 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(19, 14);
+            label1.Location = new Point(27, 23);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(443, 32);
+            label1.Size = new Size(664, 48);
             label1.TabIndex = 0;
             label1.Text = "Alon's Hub Bike Shop Inventory System";
             // 
@@ -76,8 +80,9 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(169, 599);
+            panel1.Size = new Size(241, 998);
             panel1.TabIndex = 4;
             // 
             // button3
@@ -89,9 +94,10 @@
             button3.ForeColor = Color.White;
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(0, 237);
+            button3.Location = new Point(0, 395);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(169, 49);
+            button3.Size = new Size(241, 82);
             button3.TabIndex = 6;
             button3.Text = "Accessories";
             button3.UseVisualStyleBackColor = false;
@@ -106,9 +112,10 @@
             button2.ForeColor = Color.White;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(0, 292);
+            button2.Location = new Point(0, 487);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(169, 49);
+            button2.Size = new Size(241, 82);
             button2.TabIndex = 5;
             button2.Text = "Products";
             button2.UseVisualStyleBackColor = false;
@@ -121,9 +128,10 @@
             btlogout.ForeColor = Color.White;
             btlogout.Image = (Image)resources.GetObject("btlogout.Image");
             btlogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btlogout.Location = new Point(0, 548);
+            btlogout.Location = new Point(0, 913);
+            btlogout.Margin = new Padding(4, 5, 4, 5);
             btlogout.Name = "btlogout";
-            btlogout.Size = new Size(169, 49);
+            btlogout.Size = new Size(241, 82);
             btlogout.TabIndex = 4;
             btlogout.Text = "Logout";
             btlogout.UseVisualStyleBackColor = true;
@@ -137,9 +145,10 @@
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 182);
+            button1.Location = new Point(0, 303);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(169, 49);
+            button1.Size = new Size(241, 82);
             button1.TabIndex = 3;
             button1.Text = "Dashboard";
             button1.UseVisualStyleBackColor = true;
@@ -148,9 +157,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(17, 12);
+            pictureBox1.Location = new Point(24, 20);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(135, 135);
+            pictureBox1.Size = new Size(193, 225);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -159,9 +169,11 @@
             // 
             DataGridProducts.BackgroundColor = Color.White;
             DataGridProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataGridProducts.Location = new Point(178, 182);
+            DataGridProducts.Location = new Point(254, 303);
+            DataGridProducts.Margin = new Padding(4, 5, 4, 5);
             DataGridProducts.Name = "DataGridProducts";
-            DataGridProducts.Size = new Size(895, 409);
+            DataGridProducts.RowHeadersWidth = 62;
+            DataGridProducts.Size = new Size(1279, 682);
             DataGridProducts.TabIndex = 6;
             DataGridProducts.CellContentClick += DataGridProducts_CellContentClick;
             // 
@@ -171,24 +183,39 @@
             btnRefreshproducts.FlatStyle = FlatStyle.Flat;
             btnRefreshproducts.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRefreshproducts.ForeColor = Color.White;
-            btnRefreshproducts.Location = new Point(919, 93);
+            btnRefreshproducts.Location = new Point(1313, 155);
+            btnRefreshproducts.Margin = new Padding(4, 5, 4, 5);
             btnRefreshproducts.Name = "btnRefreshproducts";
-            btnRefreshproducts.Size = new Size(154, 60);
+            btnRefreshproducts.Size = new Size(220, 100);
             btnRefreshproducts.TabIndex = 7;
             btnRefreshproducts.Text = "Refresh";
             btnRefreshproducts.UseVisualStyleBackColor = false;
             btnRefreshproducts.Click += btnRefreshproducts_Click;
             // 
+            // exitbtn
+            // 
+            exitbtn.FlatAppearance.BorderSize = 0;
+            exitbtn.FlatStyle = FlatStyle.Flat;
+            exitbtn.Image = (Image)resources.GetObject("exitbtn.Image");
+            exitbtn.Location = new Point(1269, 0);
+            exitbtn.Margin = new Padding(4, 5, 4, 5);
+            exitbtn.Name = "exitbtn";
+            exitbtn.Size = new Size(36, 42);
+            exitbtn.TabIndex = 8;
+            exitbtn.UseVisualStyleBackColor = true;
+            exitbtn.Click += exitbtn_Click;
+            // 
             // Products
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 599);
+            ClientSize = new Size(1546, 998);
             Controls.Add(btnRefreshproducts);
             Controls.Add(DataGridProducts);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Products";
             Text = "Products";
             Load += Products_Load;
@@ -212,5 +239,6 @@
         private PictureBox pictureBox1;
         private DataGridView DataGridProducts;
         private Button btnRefreshproducts;
+        private Button exitbtn;
     }
 }

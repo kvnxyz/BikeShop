@@ -74,5 +74,21 @@ namespace BikeShop
         {
 
         }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to EXIT the program?";
+            string title = "Close window";
+            MessageBoxButtons button = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, button);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
+        }
     }
 }

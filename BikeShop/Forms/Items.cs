@@ -84,21 +84,21 @@ namespace BikeShop
         private void btndeleteitem_Click(object sender, EventArgs e)
         {
             if (DataGridItems.SelectedRows.Count > 0)
-                {
-                    {
-            int id = Convert.ToInt32(DataGridItems.SelectedRows[0].Cells["PartID"].Value);
-            using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
-            sqlcon.Open();
-            string query = "DELETE FROM parts WHERE PartID = @id";
-            using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-
-            }
-                foreach (DataGridViewRow row in DataGridItems.SelectedRows)
             {
-                DataGridItems.Rows.Remove(row);
-            }
+                {
+                    int id = Convert.ToInt32(DataGridItems.SelectedRows[0].Cells["PartID"].Value);
+                    using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
+                    sqlcon.Open();
+                    string query = "DELETE FROM parts WHERE PartID = @id";
+                    using MySqlCommand cmd = new MySqlCommand(query, sqlcon);
+                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.ExecuteNonQuery();
+
+                }
+                foreach (DataGridViewRow row in DataGridItems.SelectedRows)
+                {
+                    DataGridItems.Rows.Remove(row);
+                }
 
             }
             else
@@ -119,6 +119,22 @@ namespace BikeShop
             Products form = new Products();
             form.Show();
             this.Hide();
+        }
+
+        private void exitbtn_Click(object sender, EventArgs e)
+        {
+            string message = "Do you want to EXIT the program?";
+            string title = "Close window";
+            MessageBoxButtons button = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, button);
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+
+            }
         }
     }
 }
