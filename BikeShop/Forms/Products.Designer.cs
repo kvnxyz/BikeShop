@@ -100,6 +100,7 @@
             button3.Size = new Size(241, 82);
             button3.TabIndex = 6;
             button3.Text = "Accessories";
+            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
@@ -118,6 +119,7 @@
             button2.Size = new Size(241, 82);
             button2.TabIndex = 5;
             button2.Text = "Products";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = false;
             // 
             // btlogout
@@ -151,6 +153,7 @@
             button1.Size = new Size(241, 82);
             button1.TabIndex = 3;
             button1.Text = "Dashboard";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

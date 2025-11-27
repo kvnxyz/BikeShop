@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Items));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
@@ -88,6 +88,7 @@
             button3.Size = new Size(241, 82);
             button3.TabIndex = 6;
             button3.Text = "Accessories";
+            button3.TextAlign = ContentAlignment.MiddleRight;
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -105,6 +106,7 @@
             button2.Size = new Size(241, 82);
             button2.TabIndex = 5;
             button2.Text = "Products";
+            button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -140,6 +142,7 @@
             button1.Size = new Size(241, 82);
             button1.TabIndex = 3;
             button1.Text = "Dashboard";
+            button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
