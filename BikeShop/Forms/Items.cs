@@ -39,6 +39,14 @@ namespace BikeShop
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            string itemname = TBitemName.Text;
+            string itemtype = TBitemType.Text;
+
+            if (string.IsNullOrEmpty(itemtype) || string.IsNullOrEmpty(itemtype))
+            {
+                MessageBox.Show("Please fill up all fields.", "Error");
+                return;
+            }
             using MySqlConnection sqlcon = new MySqlConnection("Server=localhost;Database=bikeinventorysystem;Uid=username;Password=password123;");
             sqlcon.Open();
 
